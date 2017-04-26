@@ -3,6 +3,7 @@ from xml.etree import ElementTree
 import http.client, urllib.parse, json
 import vlc
 import yagmail
+#from pygame import mixer
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -88,6 +89,9 @@ def handle_speech(string_name):
     print('Playing text')
     p = vlc.MediaPlayer("name.mp3")
     p.play()
+    #mixer.init()
+    #mixer.music.load("name.mp3")
+    #mixer.music.play()
 
     return 'Ok'
 
